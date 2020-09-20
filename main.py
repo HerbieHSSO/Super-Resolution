@@ -11,11 +11,11 @@ while True:
     image = pyautogui.screenshot()
     image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
 # Read the desired model
-    path = "ESPCN_x3.pb"
+    path = "ESPCN_x2.pb"
     sr.readModel(path)
 
 # Set the desired model and scale to get correct pre- and post-processing
-    sr.setModel("espcn", 3)
+    sr.setModel("espcn", 2)
 
 # Upscale the image
     result = sr.upsample(image)
